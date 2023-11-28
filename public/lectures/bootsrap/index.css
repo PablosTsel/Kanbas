@@ -1,0 +1,20 @@
+/* Bootrstrap Overrides */
+
+
+
+.list-group {
+    border-radius: 0;
+}
+
+.list-group-item {
+    color: red;
+    border: none;
+}
+
+.list-group-item.active {
+    color: black;
+    background-color: white;
+    border-color: white;
+    border-left:2px solid black;
+
+}

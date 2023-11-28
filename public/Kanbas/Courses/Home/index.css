@@ -1,0 +1,13 @@
+p {
+    text-align: left;
+}
+
+
+.wd-flex-row-container { 
+    display: flex;
+    flex-direction: row;
+    }
+    .wd-flex-grow-1 {
+    flex-grow: 1;
+    }
+    
