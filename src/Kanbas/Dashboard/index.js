@@ -54,12 +54,12 @@ function Dashboard() {
       <button onClick={addCourse} className="btn btn-success">
         Add
       </button>
-      <div class="row">
-        <div class="row row-cols-1 row-cols-md-5 g-4">
+      <div className="row">
+        <div className="row row-cols-1 row-cols-md-5 g-4">
           {courses.map((course, index) => (
-            <div class="col" style={{ width: 300 }}>
-              <div class="card">
-                <div class="card-body">
+            <div className="col" style={{ width: 300 }}>
+              <div className="card" key={course._id}>
+                <div className="card-body">
                   <button
                     onClick={() => deleteCourse(course._id)}
                     className="btn btn-danger float-end"
@@ -67,7 +67,7 @@ function Dashboard() {
                     Delete
                   </button>
                   <button onClick={() => setCourse(course)}>Edit</button>
-                  <h5 class="card-title">{course.name}</h5>
+                  <h5 className="card-title">{course.name}</h5>
 
                   <Link
                     key={course._id}
@@ -76,7 +76,7 @@ function Dashboard() {
                   >
                     {course.name}
                   </Link>
-                  <p class="card-text">
+                  <p className="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
                     little bit longer.

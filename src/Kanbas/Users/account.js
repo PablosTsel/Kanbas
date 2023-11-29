@@ -11,7 +11,7 @@ function Account() {
   };
   const signout = async () => {
     await client.signout();
-    navigate("/signin");
+    navigate("/Kanbas/Signin");
   };
 
 
@@ -56,10 +56,9 @@ function Account() {
                 Save
             </button>
             <button onClick={signout}>
-              Signout
-            
+                Signout
             </button>
-            
+                        
             <Link to="/Kanbas/table" className="btn btn-warning w-100">
                 Users
             </Link>
