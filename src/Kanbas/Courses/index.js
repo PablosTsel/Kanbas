@@ -6,8 +6,7 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
-import JsonPre from "../../Labs/a3/JsonPre";
-import db from "../Database";
+
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -19,7 +18,7 @@ import * as client from "./client";
 function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const [empty, kanbas, courses, id, screen] = pathname.split("/");
+  const [screen] = pathname.split("/");
   const [course, setCourse] = useState({}); // = db.courses.find((course) => course._id === courseId);
   const fetchCourse = async () => {
     const course = await client.fetchCourse(courseId);
