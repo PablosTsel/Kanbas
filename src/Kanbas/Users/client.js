@@ -4,7 +4,7 @@ const request = axios.create({
 });
 
 export const BASE_API = process.env.REACT_APP_BASE_API_URL;
-export const USERS_API = `${BASE_API}/api/users`;
+export const USERS_API = `${BASE_API}users`;
 export const updateUser = async (user) => {
   const response = await request.put(`${USERS_API}/${user._id}`, user);
   return response.data;
